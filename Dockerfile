@@ -1,10 +1,13 @@
 FROM php:8.1-apache
 
-# Install mysqli extension
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+# Enable Apache mod_rewrite if needed
+RUN a2enmod rewrite
 
-# Copy your PHP project files into the Apache web root
+# Copy everything to Apache root
 COPY . /var/www/html/
+
+# Set correct permissions (optional, useful for uploads etc.)
+RUN chown -R www-data:www-data /var/www/html
 
 # Expose port 80
 EXPOSE 80
