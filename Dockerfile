@@ -1,12 +1,15 @@
 FROM php:8.1-apache
 
-# Enable Apache mod_rewrite if needed
+# Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Copy everything to Apache root
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy project files to the container
 COPY . /var/www/html/
 
-# Set correct permissions (optional, useful for uploads etc.)
+# Set appropriate permissions
 RUN chown -R www-data:www-data /var/www/html
 
 # Expose port 80
