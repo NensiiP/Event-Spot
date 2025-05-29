@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
+
+:root {
+    --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%), 0 8px 16px rgb(13 0 77 / 8%);
+    --bg-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.621);
+}
+*::-webkit-scrollbar{
+    width: .4rem;
+}
+*::-webkit-scrollbar-track{
+    background: rgb(6, 6, 44);
+}
+*::-webkit-scrollbar-thumb{
+    background: #0040ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.head{
+    margin-top: -70px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.facilities-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.facility {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.facility img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.facility h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.facility:hover img {
+    transform: scale(1.1);
+}
+
