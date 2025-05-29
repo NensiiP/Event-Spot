@@ -1,16 +1,17 @@
 FROM php:8.1-apache
 
-# Enable Apache mod_rewrite
-RUN a2enmod rewrite
-
-# Set working directory
-WORKDIR /var/www/html
-
-# Copy project files to the container
+# Copy all files
 COPY . /var/www/html/
 
-# Set appropriate permissions
+# Enable mod_rewrite
+RUN a2enmod rewrite
+
+# Permissions
 RUN chown -R www-data:www-data /var/www/html
 
-# Expose port 80
+# Expose port
 EXPOSE 80
+
+# Start command
+CMD ["apache2ctl", "-D", "FOREGROUND"]
+
