@@ -1,6 +1,6 @@
 <?php
 
-$server = "mysql.railway.internal";
+$server = "shinkansen.proxy.rlwy.net";
 $username = "root";
 $password = "akslCPgyUhwMYfxMRYWhpXgkFRGpqvgn";
 $database = "railway";
