@@ -1,13 +1,15 @@
 <?php
 
-$server = getenv('DB_HOST');
-$username = getenv('DB_USER');
-$password = getenv('DB_PASS');
-$database = getenv('DB_NAME');
+$server = "ballast.proxy.rlwy.net";
+$port = 43477;
+$username = "root";
+$password = "akslCPgyUhwMYfxMRYWhpXgkFRGpqvgn";
+$database = "railway";
 
-$conn = mysqli_connect($server,$username,$password,$database);
+$conn = mysqli_connect($server, $username, $password, $database, $port);
 
-if(!$conn){
-    die("<script>alert('connection Failed.')</script>");
+if (!$conn) {
+    die("<script>alert('Connection Failed.')</script>");
 }
 ?>
+
