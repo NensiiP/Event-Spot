@@ -3,7 +3,7 @@
 $server = "ballast.proxy.rlwy.net";
 $port = 43477;
 $username = "root";
-$password = "akslCPgyUhwMYfxMRYWhpXgkFRGpqvgn";
+$password = "tvemiHAbTilnDWinzDwTyLADqFFaPCWn";
 $database = "railway";
 
 $conn = mysqli_connect($server, $username, $password, $database, $port);
