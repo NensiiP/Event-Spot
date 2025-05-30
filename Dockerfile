@@ -1,18 +1,12 @@
-# Dockerfile
 FROM php:8.1-apache
 
-# Enable Apache mod_rewrite
-RUN a2enmod rewrite
+# Install mysqli extension
+RUN docker-php-ext-install mysqli
 
-# Set working directory
-WORKDIR /var/www/html
-
-# Copy all files from repo to apache folder
+# Copy your PHP code to container
 COPY . /var/www/html/
 
-# Set correct permissions
-RUN chown -R www-data:www-data /var/www/html
+# Enable apache rewrite mod if needed
+RUN a2enmod rewrite
 
-# Expose port 80
-EXPOSE 80
 
