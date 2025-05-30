@@ -1,12 +1,11 @@
 <?php
 
-$server = "ballast.proxy.rlwy.net";
-$port = 43477;
+$server = "localhost";
 $username = "root";
-$password = "tvemiHAbTilnDWinzDwTyLADqFFaPCWn";
-$database = "railway";
+$password = "";
+$database = "sevenseas";
 
-$conn = mysqli_connect($server, $username, $password, $database, $port);
+$conn = mysqli_connect($server, $username, $password, $database);
 
 if (!$conn) {
     die("<script>alert('Connection Failed.')</script>");
