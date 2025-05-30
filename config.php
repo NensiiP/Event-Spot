@@ -1,9 +1,9 @@
 <?php
 
-$server = "shinkansen.proxy.rlwy.net";
+$server = "localhost";
 $username = "root";
-$password = "akslCPgyUhwMYfxMRYWhpXgkFRGpqvgn";
-$database = "railway";
+$password = "";
+$database = "sevenseas";
 
 $conn = mysqli_connect($server,$username,$password,$database);
 
