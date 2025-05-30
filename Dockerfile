@@ -1,17 +1,18 @@
+# Dockerfile
 FROM php:8.1-apache
 
-# Copy all files
-COPY . /var/www/html/
-
-# Enable mod_rewrite
+# Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Permissions
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy all files from repo to apache folder
+COPY . /var/www/html/
+
+# Set correct permissions
 RUN chown -R www-data:www-data /var/www/html
 
-# Expose port
+# Expose port 80
 EXPOSE 80
-
-# Start command
-CMD ["apache2ctl", "-D", "FOREGROUND"]
 
